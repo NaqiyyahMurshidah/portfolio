@@ -10,6 +10,29 @@
       .flip-container:hover .rotate-y-180 {
         transform: rotateY(180deg);
       }
+      .img-container {
+      position: relative;
+      width: 55rem; /* Adjust to fit your laptop image size */
+      height: auto; /* Adjust to fit your laptop image size */
+      margin: 0 auto;
+    }
+
+    
+
+    .hidden {
+      opacity: 0;
+    }
+
+    #nextImage {
+      position: absolute;
+      bottom: 10px;
+      right: 10px;
+      background-color: rgba(0, 0, 0, 0.5);
+      color: white;
+      border: none;
+      padding: 10px 20px;
+      cursor: pointer;
+    }
     </style>
   </head>
   <body class="bg-gradient-to-r from-zinc-950 via-zinc-800 to-zinc-700">
@@ -53,7 +76,9 @@
         <p class="text-3xl">Hye! My name is</p>
         <h1 class="text-6xl font-bold">Murshidah</h1>
         <p>International Islamic University Malaysia student</p>
-        <button class="bg-amber-500 mt-12 p-3 w-36 rounded-full active:opacity-35 ">
+        <button
+          class="bg-amber-500 mt-12 p-3 w-36 rounded-full active:opacity-35"
+        >
           Know me
         </button>
       </div>
@@ -133,10 +158,16 @@
       </div>
     </div>
     <!-- project section  -->
-    <div class="flex flex-col">
-      <h1 class="text-3xl font-black text-center">Project</h1>
-      <div>
-        
+    <div class="flex flex-col mt-20">
+      <h1 class="text-3xl font-black text-center">Frontend Project</h1>
+      <!-- the laptop -->
+      <div class="img-container mt-7">
+        <div>
+          <img src="./mypage.png" alt="img1" class="slider-image w-[120rem] h-[30rem] " >
+          <img src="./portfolio.png" alt="img2" class="slider-image w-[120rem] h-[30rem] hidden" >
+          <img src="./note.png" alt="img3" class="slider-image w-[120rem] h-[30rem] hidden" >
+        </div>
+        <button class="" id="nextImage">></button>
       </div>
     </div>
     <!-- know me section  -->
@@ -176,5 +207,18 @@
         </div>
       </div>
     </div>
+
+    <script>
+      let curretImageindex = 0;
+      const image = document.querySelectorAll('.slider-image');
+      const nextBtn = document.getElementById('nextImage');
+
+      const showNextImage = () => {
+        image[curretImageindex].classList.add('hidden');
+        curretImageindex = (curretImageindex + 1) % image.length;
+        image[curretImageindex].classList.remove('hidden');
+      }
+      nextBtn.addEventListener('click', showNextImage);
+    </script>
   </body>
 </html>
