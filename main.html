@@ -5,16 +5,45 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link href="./output.css" rel="stylesheet" />
     <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+      .flip-container:hover .rotate-y-180 {
+        transform: rotateY(180deg);
+      }
+    </style>
   </head>
   <body class="bg-gradient-to-r from-zinc-950 via-zinc-800 to-zinc-700">
-    <header class="bg-zinc-800 p-4">
-      <div class="flex flex-row justify-between">
+    <header class="bg-zinc-800 p-4 h-16">
+      <div class="flex flex-row justify-between items-center">
         <h1 class="font-extrabold text-amber-500">Murshidah</h1>
-        <div class="flex flex-row gap-5 text-gray-300">
-          <h2>Home</h2>
-          <h2>About me</h2>
-          <h2>Contact</h2>
-          <h2>Project</h2>
+        <div class="flex flex-row gap-7 text-gray-300">
+          <!-- home navbar -->
+          <div class="flex flex-col group">
+            <h2 class="cursor-pointer">Home</h2>
+            <div
+              class="bg-amber-500 h-0 transition-all duration-200 ease-linear group-hover:h-1"
+            ></div>
+          </div>
+          <!-- about navbar -->
+          <div class="flex flex-col group">
+            <h2 class="cursor-pointer">About me</h2>
+            <div
+              class="bg-amber-500 h-0 transition-all duration-200 ease-linear group-hover:h-1"
+            ></div>
+          </div>
+          <!-- project navbar -->
+          <div class="flex flex-col group">
+            <h2 class="cursor-pointer">Project</h2>
+            <div
+              class="bg-amber-500 h-0 transition-all duration-200 ease-linear group-hover:h-1"
+            ></div>
+          </div>
+          <!-- contact navbar -->
+          <div class="flex flex-col group">
+            <h2 class="cursor-pointer">Contact</h2>
+            <div
+              class="bg-amber-500 h-0 transition-all duration-200 ease-linear group-hover:h-1"
+            ></div>
+          </div>
         </div>
       </div>
     </header>
@@ -27,49 +56,80 @@
           Know me
         </button>
       </div>
-      <div>
-        <img src="./pic.jpg" alt="" class="rounded-full" />
+      <!-- image -->
+      <div class="flip-container mx-aotu mt-8">
+        <div class="relative w-[35rem] h-[35rem] ">
+          <img src="./ppic.jpeg" alt="" class="absolute inset-0 w-full h-full object-cover transition-transform transform duration-700 rounded-full" style="backface-visibility: hidden;" />
+          <img src="./pic.jpg" alt="" class="absolute inset-0 w-full h-full object-cover rounded-full transition-transform transform duration-700 rotate-y-180" style="backface-visibility: hidden;"/>
+        </div>
       </div>
     </div>
     <!-- about section -->
     <div id="about" class="flex flex-row justify-center gap-48">
       <img src="./pic2-removebg-preview.png" alt="" />
       <!-- start wording -->
-      <div class="flex justify-center flex-col gap-10">
+      <div class="flex justify-center flex-col gap-10 text-zinc-200">
         <div class="flex flex-col">
-          <h1 class="text-4xl">About me</h1>
+          <h1 class="text-4xl font-black">About me</h1>
           <h1 class="mt-10">
-            I'm Murshidah.In early stage of web development. <br />
-            Currently interested to deeply learn more about web <br />
-            development, mobile aaplication development, AI, <br />
-            Cyber security and also digital marketing.
+            Hello, I am Murshidah. <br />
+            I am currently in the early stages of web development. <br />
+            I am eager to deepen my knowledge in web development, <br />
+            mobile application development, artificial intelligence, <br />
+            cybersecurity, and digital marketing.
           </h1>
         </div>
         <div class="flex flex-col">
-          <h1 class="text-4xl">Experience in</h1>
+          <h1 class="text-4xl font-black">Experience in</h1>
           <div class="flex flex-row gap-6 flex-wrap w-[40rem] mt-10">
-            <h1 class="bg-amber-500 p-4 w-32">HTML</h1>
-            <h1 class="bg-amber-500 p-4 w-32">CSS</h1>
-            <h1 class="bg-amber-500 p-4 w-32">Js</h1>
-            <h1 class="bg-amber-500 p-4 w-32">React</h1>
-            <h1 class="bg-amber-500 p-4 w-32">tailwindcss</h1>
-            <h1 class="bg-amber-500 p-4 w-32">Vue</h1>
-            <h1 class="bg-amber-500 p-4 w-32">Expo</h1>
+            <h1
+              class="bg-amber-500 rounded-full text-center font-black text-white p-4 w-32"
+            >
+              HTML
+            </h1>
+            <h1
+              class="bg-amber-500 rounded-full text-center font-black text-white p-4 w-32"
+            >
+              CSS
+            </h1>
+            <h1
+              class="bg-amber-500 rounded-full text-center font-black text-white p-4 w-32"
+            >
+              Js
+            </h1>
+            <h1
+              class="bg-amber-500 rounded-full text-center font-black text-white p-4 w-32"
+            >
+              React
+            </h1>
+            <h1
+              class="bg-amber-500 rounded-full text-center font-black text-white p-4 w-32"
+            >
+              tailwindcss
+            </h1>
+            <h1
+              class="bg-amber-500 rounded-full text-center font-black text-white p-4 w-32"
+            >
+              Vue
+            </h1>
+            <h1
+              class="bg-amber-500 rounded-full text-center font-black text-white p-4 w-32"
+            >
+              Expo
+            </h1>
           </div>
         </div>
       </div>
     </div>
     <!-- project section  -->
-    <div>
-      
-    </div>
+    <div></div>
     <!-- know me section  -->
     <div></div>
 
     <!-- contact me section  -->
     <div class="flex flex-col justify-center items-center m-20">
-      <h1 class="font-extrabold text-6xl ">Contact me</h1>
-      <div class="flex flex-row gap-28 ">
+      <h1 class="font-extrabold text-3xl">Contact me</h1>
+      <div class="flex flex-row gap-28">
         <!-- gmail -->
         <div class="flex flex-col justify-center items-center">
           <svg
@@ -78,7 +138,7 @@
             viewBox="0 0 24 24"
             stroke-width="1.5"
             stroke="currentColor"
-            class="w-52 h-52"
+            class="w-40 h-40"
           >
             <path
               stroke-linecap="round"
@@ -94,8 +154,8 @@
           <a href="">my github link</a>
         </div>
         <!-- linkedin -->
-        <div class="justify-center items-center flex flex-col font-bold ">
-          <img src="./linkedin.png" alt="" width="190rem "/>
+        <div class="justify-center items-center flex flex-col font-bold">
+          <img src="./linkedin.png" alt="" width="190rem " />
           <a href="" class="mt-20">my linkedin link</a>
         </div>
       </div>
