@@ -3,8 +3,9 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link href="./output.css" rel="stylesheet" />
+    <link href="./style.css" rel="stylesheet" />
     <script src="https://cdn.tailwindcss.com"></script>
+    <title>portfolio</title>
     <style>
       .flip-container:hover .rotate-y-180 {
         transform: rotateY(180deg);
@@ -52,15 +53,25 @@
         <p class="text-3xl">Hye! My name is</p>
         <h1 class="text-6xl font-bold">Murshidah</h1>
         <p>International Islamic University Malaysia student</p>
-        <button class="bg-amber-500 mt-12 p-3 w-36 rounded-full">
+        <button class="bg-amber-500 mt-12 p-3 w-36 rounded-full active:opacity-35 ">
           Know me
         </button>
       </div>
       <!-- image -->
       <div class="flip-container mx-aotu mt-8">
-        <div class="relative w-[35rem] h-[35rem] ">
-          <img src="./ppic.jpeg" alt="" class="absolute inset-0 w-full h-full object-cover transition-transform transform duration-700 rounded-full" style="backface-visibility: hidden;" />
-          <img src="./pic.jpg" alt="" class="absolute inset-0 w-full h-full object-cover rounded-full transition-transform transform duration-700 rotate-y-180" style="backface-visibility: hidden;"/>
+        <div class="relative w-[35rem] h-[35rem] shadow-white rounded-full">
+          <img
+            src="./ppic.jpeg"
+            alt=""
+            class="absolute inset-0 w-full h-full object-cover transition-transform transform duration-700 rounded-full"
+            style="backface-visibility: hidden"
+          />
+          <img
+            src="./pic.jpg"
+            alt=""
+            class="absolute inset-0 w-full h-full object-cover rounded-full transition-transform transform duration-700 rotate-y-180"
+            style="backface-visibility: hidden"
+          />
         </div>
       </div>
     </div>
@@ -83,37 +94,37 @@
           <h1 class="text-4xl font-black">Experience in</h1>
           <div class="flex flex-row gap-6 flex-wrap w-[40rem] mt-10">
             <h1
-              class="bg-amber-500 rounded-full text-center font-black text-white p-4 w-32"
+              class="bg-amber-500 rounded-full text-center font-black text-white p-4 w-32 hover:translate-x-3 hover:-translate-y-3 duration-75 ease-in-out"
             >
               HTML
             </h1>
             <h1
-              class="bg-amber-500 rounded-full text-center font-black text-white p-4 w-32"
+              class="bg-amber-500 rounded-full text-center font-black text-white p-4 w-32 hover:translate-x-3 hover:-translate-y-3 duration-75 ease-in-out"
             >
               CSS
             </h1>
             <h1
-              class="bg-amber-500 rounded-full text-center font-black text-white p-4 w-32"
+              class="bg-amber-500 rounded-full text-center font-black text-white p-4 w-32 hover:translate-x-3 hover:-translate-y-3 duration-75 ease-in-out"
             >
               Js
             </h1>
             <h1
-              class="bg-amber-500 rounded-full text-center font-black text-white p-4 w-32"
+              class="bg-amber-500 rounded-full text-center font-black text-white p-4 w-32 hover:translate-x-3 hover:-translate-y-3 duration-75 ease-in-out"
             >
               React
             </h1>
             <h1
-              class="bg-amber-500 rounded-full text-center font-black text-white p-4 w-32"
+              class="bg-amber-500 rounded-full text-center font-black text-white p-4 w-32 hover:translate-x-3 hover:-translate-y-3 duration-75 ease-in-out"
             >
               tailwindcss
             </h1>
             <h1
-              class="bg-amber-500 rounded-full text-center font-black text-white p-4 w-32"
+              class="bg-amber-500 rounded-full text-center font-black text-white p-4 w-32 hover:translate-x-3 hover:-translate-y-3 duration-75 ease-in-out"
             >
               Vue
             </h1>
             <h1
-              class="bg-amber-500 rounded-full text-center font-black text-white p-4 w-32"
+              class="bg-amber-500 rounded-full text-center font-black text-white p-4 w-32 hover:translate-x-3 hover:-translate-y-3 duration-75 ease-in-out"
             >
               Expo
             </h1>
@@ -122,7 +133,12 @@
       </div>
     </div>
     <!-- project section  -->
-    <div></div>
+    <div class="flex flex-col">
+      <h1 class="text-3xl font-black text-center">Project</h1>
+      <div>
+        
+      </div>
+    </div>
     <!-- know me section  -->
     <div></div>
 
@@ -138,7 +154,7 @@
             viewBox="0 0 24 24"
             stroke-width="1.5"
             stroke="currentColor"
-            class="w-40 h-40"
+            class="w-32 h-32"
           >
             <path
               stroke-linecap="round"
@@ -150,12 +166,12 @@
         </div>
         <!-- github -->
         <div class="justify-center items-center flex flex-col font-bold">
-          <img src="./github.png" alt="" width="270rem" />
+          <img src="./github.png" alt="" width="230rem" />
           <a href="">my github link</a>
         </div>
         <!-- linkedin -->
         <div class="justify-center items-center flex flex-col font-bold">
-          <img src="./linkedin.png" alt="" width="190rem " />
+          <img src="./linkedin.png" alt="" width="160rem " />
           <a href="" class="mt-20">my linkedin link</a>
         </div>
       </div>
