@@ -10,28 +10,13 @@
       .flip-container:hover .rotate-y-180 {
         transform: rotateY(180deg);
       }
-      .img-container {
-      position: relative;
-      width: 55rem; /* Adjust to fit your laptop image size */
-      height: auto; /* Adjust to fit your laptop image size */
-      margin: 0 auto;
+     
+    html{
+      scroll-behavior: smooth;
     }
-
-    
-
-    .hidden {
-      opacity: 0;
-    }
-
-    #nextImage {
-      position: absolute;
-      bottom: 10px;
-      right: 10px;
-      background-color: rgba(0, 0, 0, 0.5);
-      color: white;
-      border: none;
-      padding: 10px 20px;
-      cursor: pointer;
+    .run{
+      transition: transform 0.1s ease; /* Faster transition */
+        position: relative;
     }
     </style>
   </head>
@@ -41,43 +26,51 @@
         <h1 class="font-extrabold text-amber-500">Murshidah</h1>
         <div class="flex flex-row gap-7 text-gray-300">
           <!-- home navbar -->
-          <div class="flex flex-col group">
-            <h2 class="cursor-pointer">Home</h2>
-            <div
-              class="bg-amber-500 h-0 transition-all duration-200 ease-linear group-hover:h-1"
-            ></div>
-          </div>
+          <a href="#home" >
+            <div class="flex flex-col group">
+              <h2 class="cursor-pointer">Home</h2>
+              <div
+                class="bg-amber-500 h-0 transition-all duration-200 ease-linear group-hover:h-1"
+              ></div>
+            </div>
+          </a>
           <!-- about navbar -->
-          <div class="flex flex-col group">
-            <h2 class="cursor-pointer">About me</h2>
-            <div
-              class="bg-amber-500 h-0 transition-all duration-200 ease-linear group-hover:h-1"
-            ></div>
-          </div>
+          <a href="#about" class="duration-1000">
+            <div class="flex flex-col group">
+              <h2 class="cursor-pointer">About me</h2>
+              <div
+                class="bg-amber-500 h-0 transition-all duration-200 ease-linear group-hover:h-1"
+              ></div>
+            </div>
+          </a>
           <!-- project navbar -->
-          <div class="flex flex-col group">
-            <h2 class="cursor-pointer">Project</h2>
-            <div
-              class="bg-amber-500 h-0 transition-all duration-200 ease-linear group-hover:h-1"
-            ></div>
-          </div>
+          <a href="#project">
+            <div class="flex flex-col group">
+              <h2 class="cursor-pointer">Project</h2>
+              <div
+                class="bg-amber-500 h-0 transition-all duration-200 ease-linear group-hover:h-1"
+              ></div>
+            </div>
+          </a>
           <!-- contact navbar -->
-          <div class="flex flex-col group">
-            <h2 class="cursor-pointer">Contact</h2>
-            <div
-              class="bg-amber-500 h-0 transition-all duration-200 ease-linear group-hover:h-1"
-            ></div>
-          </div>
+          <a href="#contact">
+            <div class="flex flex-col group">
+              <h2 class="cursor-pointer">Contact</h2>
+              <div
+                class="bg-amber-500 h-0 transition-all duration-200 ease-linear group-hover:h-1"
+              ></div>
+            </div>
+          </a>
         </div>
       </div>
     </header>
     <div class="flex flex-row mt-10 ml-36 gap-56">
-      <div class="flex flex-col justify-center text-zinc-200">
+      <div class="flex flex-col justify-center text-zinc-200" id="home">
         <p class="text-3xl">Hye! My name is</p>
         <h1 class="text-6xl font-bold">Murshidah</h1>
         <p>International Islamic University Malaysia student</p>
         <button
-          class="bg-amber-500 mt-12 p-3 w-36 rounded-full active:opacity-35"
+          class="run bg-amber-500 mt-12 p-3 w-36 rounded-full active:opacity-35 " id="knowbtn"
         >
           Know me
         </button>
@@ -158,24 +151,28 @@
       </div>
     </div>
     <!-- project section  -->
-    <div class="flex flex-col mt-20">
-      <h1 class="text-3xl font-black text-center">Frontend Project</h1>
-      <!-- the laptop -->
-      <div class="img-container mt-7">
-        <div>
-          <img src="./mypage.png" alt="img1" class="slider-image w-[120rem] h-[30rem] " >
-          <img src="./portfolio.png" alt="img2" class="slider-image w-[120rem] h-[30rem] hidden" >
-          <img src="./note.png" alt="img3" class="slider-image w-[120rem] h-[30rem] hidden" >
+    <div class="flex flex-col mt-44 justify-center items-center gap-10" id="project">
+      <h1 class="text-3xl font-black text-center text-zinc-200">Frontend Project</h1>
+      
+
+      <div class="flex flex-row gap-10 mt-20">
+        <div class="bg-gradient-to-r hover:translate-x-6 hover:-translate-y-6 duration-75 ease-in-out from-amber-500 via-amber-300 to-amber-200 rounded-lg flex justify-center w-[30rem] h-[15rem]">
+          <img src="./note.png" alt="" class="object-contain w-[29rem] h-[55rem]>">
         </div>
-        <button class="" id="nextImage">></button>
+        <div class="bg-gradient-to-r hover:translate-x-6 hover:-translate-y-6 duration-75 ease-in-out from-amber-500 via-amber-300 to-amber-200 rounded-lg flex justify-center w-[30rem] h-[15rem]">
+          <img src="./portfolio.png" alt="" class="object-contain w-[29rem] h-[55rem]>">
+        </div>
       </div>
+       <div class="bg-gradient-to-r hover:translate-x-6 hover:-translate-y-6 duration-75 ease-in-out from-amber-500 via-amber-300 to-amber-200 rounded-lg flex justify-center w-[30rem] h-[15rem]">
+          <img src="./mypage.png" alt="" class="object-contain w-[29rem] h-[13rem]">
+        </div>
     </div>
     <!-- know me section  -->
     <div></div>
 
     <!-- contact me section  -->
-    <div class="flex flex-col justify-center items-center m-20">
-      <h1 class="font-extrabold text-3xl">Contact me</h1>
+    <div class="flex flex-col justify-center items-center m-24">
+      <h1 class="font-extrabold text-3xl mt-32" id="contact">Contact me</h1>
       <div class="flex flex-row gap-28">
         <!-- gmail -->
         <div class="flex flex-col justify-center items-center">
@@ -201,24 +198,28 @@
           <a href="">my github link</a>
         </div>
         <!-- linkedin -->
-        <div class="justify-center items-center flex flex-col font-bold">
-          <img src="./linkedin.png" alt="" width="160rem " />
-          <a href="" class="mt-20">my linkedin link</a>
-        </div>
+        <a href="https://www.linkedin.com/in/naqiyyah-murshidah-0708b1290/" target="_blank" >
+          <div class="justify-center items-center flex flex-col font-bold">
+            <img src="./linkedin.png" alt="" width="160rem " />
+            <p class="mt-20">my linkedin link</p>
+          </div>
+        </a>
       </div>
     </div>
 
     <script>
-      let curretImageindex = 0;
-      const image = document.querySelectorAll('.slider-image');
-      const nextBtn = document.getElementById('nextImage');
+      const button = document.getElementById("knowbtn");
 
-      const showNextImage = () => {
-        image[curretImageindex].classList.add('hidden');
-        curretImageindex = (curretImageindex + 1) % image.length;
-        image[curretImageindex].classList.remove('hidden');
-      }
-      nextBtn.addEventListener('click', showNextImage);
+      button.addEventListener("mouseover", () => {
+        const distance = 200;
+        const direction = Math.random() < 0.5 ? -1 : 1;//randomly choose left or right
+        const newX = direction * distance;
+        button.style.transform = `translateX(${newX}px)`;
+      })
+
+      button.addEventListener("click", () => {
+        alert("OPPSIE CANNOT!");
+      })
     </script>
   </body>
 </html>
