@@ -18,6 +18,7 @@
       transition: transform 0.1s ease; /* Faster transition */
         position: relative;
     }
+    
     </style>
   </head>
   <body class="bg-gradient-to-r from-zinc-950 via-zinc-800 to-zinc-700">
@@ -93,8 +94,11 @@
         </div>
       </div>
     </div>
+
+  
+
     <!-- about section -->
-    <div id="about" class="flex flex-row justify-center gap-48">
+    <div id="about" class="flex flex-row justify-center gap-48 mt-24">
       <img src="./pic2-removebg-preview.png" alt="" />
       <!-- start wording -->
       <div class="flex justify-center flex-col gap-10 text-zinc-200">
@@ -182,7 +186,7 @@
             viewBox="0 0 24 24"
             stroke-width="1.5"
             stroke="currentColor"
-            class="w-32 h-32"
+            class="w-32 h-32 "
           >
             <path
               stroke-linecap="round"
@@ -207,8 +211,10 @@
       </div>
     </div>
 
+    
     <script>
       const button = document.getElementById("knowbtn");
+      const knowMe = document.getElementById("knowme");
 
       button.addEventListener("mouseover", () => {
         const distance = 200;
@@ -217,9 +223,10 @@
         button.style.transform = `translateX(${newX}px)`;
       })
 
-      button.addEventListener("click", () => {
-        alert("OPPSIE CANNOT!");
-      })
+       button.addEventListener("click", () => {
+        alert('scroll down');
+      });
     </script>
+    
   </body>
 </html>
